@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+
+        //入口函数
+        $(function () {
+           //获取name对象，绑定单击事件
+            /*$("#name").click(function (){
+               alert("我被点击了");
+            });*/
+
+            //给name绑定鼠标移动到元素之上事件，绑定鼠标移出事件
+            /*$("#name").mouseover(function (){
+                alert("鼠标来咯");
+            });
+
+            $("#name").mouseout(function (){
+                alert("鼠标走咯");
+            });*/
+
+            //简化操作，链式编程
+            /*$("#name").mouseover(function (){
+                alert("鼠标来咯");
+            }).mouseout(function (){
+                alert("鼠标走咯");
+            });*/
+
+            $("name").focus();//让文本框获得焦点（浏览器默认事件）
+        });
+
+
+    </script>
+</head>
+<body>
+<input id="name" type="text" value="绑定点击事件">
+</body>
+</html>

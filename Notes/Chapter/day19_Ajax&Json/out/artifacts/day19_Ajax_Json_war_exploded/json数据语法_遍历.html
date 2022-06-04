@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var person = {name: "郭江瑞", age: 22, gender: true};
+
+        //1.定义基本格式
+        var ps = [
+            {name: "郭江瑞", age: 22, gender: true},
+            {name: "杨发发", age: 21, gender: false},
+            {name: "包卓龙", age: 21, gender: false},
+            {name: "熊杰", age: 21, gender: true}];
+
+        //2.获取person对象中的所有的键和值
+        //利用for in循环
+        /*for (var key in person){
+            alert(key + ":" + person[key]);
+        }*/
+
+        //3.获取ps对象中的所有的键和值
+        for (var i = 0; i < ps.length; i++) {
+            for (var key in ps[i]){
+                alert(key + ":" + ps[i][key])
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

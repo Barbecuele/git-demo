@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <!--<bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl" init-method="init" destroy-method="destroy"></bean>-->
+
+        <!--<bean id="userDao" class="com.itheima.factory.StaticFactory" factory-method="getUserDao"></bean>-->
+
+        <!--<bean id="factory" class="com.itheima.factory.DynamicFactory"></bean>
+        <bean id="userDao" factory-bean="factory" factory-method="getUserDao"></bean>-->
+
+        <!--<bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl">
+                <property name="username" value="郭江瑞"></property>
+                <property name="age" value="23"></property>
+        </bean>-->
+
+        <bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl">
+                <property name="strList" >
+                        <list>
+                                <value>熊杰</value>
+                                <value>米秀锦</value>
+                                <value>高嘉琪</value>
+                        </list>
+                </property>
+
+                <property name="userMap">
+                        <map>
+                                <entry key="user1" value-ref="user1"></entry>
+                                <entry key="user2" value-ref="user2"></entry>
+                        </map>
+                </property>
+
+                <property name="properties">
+                        <props>
+                                <prop key="张自强">male</prop>
+                                <prop key="李嘉诚">male</prop>
+                                <prop key="lucy">female</prop>
+                        </props>
+                </property>
+        </bean>
+
+        <bean id="user1" class="com.itheima.domain.User">
+                <property name="name" value="tom"></property>
+                <property name="addr" value="beijing"></property>
+        </bean>
+
+        <bean id="user2" class="com.itheima.domain.User">
+                <property name="name" value="jerry"></property>
+                <property name="addr" value="jiangxi"></property>
+        </bean>
+
+        <!--<bean id="userService" class="com.itheima.service.impl.UserServiceImpl">
+                name="userDao"中的userDao指的是set方法注入中的属性
+                <property name="userDao" ref="userDao"></property>
+        </bean>-->
+
+        <!--<bean id="userService" class="com.itheima.service.impl.UserServiceImpl" p:userDao-ref="userDao"/>-->
+
+        <bean id="userService" class="com.itheima.service.impl.UserServiceImpl">
+                <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+                <property name="username" value="杨发发"></property>
+                <property name="age" value="22"></property>
+        </bean>
+
+        <import resource="applicationContext-user.xml"></import>
+
+        <import resource="applicationContext-product.xml"></import>
+</beans>

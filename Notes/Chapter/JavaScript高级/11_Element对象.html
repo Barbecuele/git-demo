@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element</title>
+</head>
+<body>
+    <a>Please Combo me</a>
+    <input type="button" value="设置属性" id="btn_set">
+    <input type="button" value="删除属性" id="btn_remove">
+<script>
+    //获取btn
+    var btn = document.getElementById("btn_set");
+    btn.onclick = function (){
+        var name = document.getElementsByTagName("a")[0];
+        name.setAttribute("href","https://www.baidu.com")
+    }
+
+    var btn_remove = document.getElementById("btn_remove");
+    btn_remove.onclick = function (){
+        var name = document.getElementsByTagName("a")[0];
+        name.removeAttribute("href");
+    }
+</script>
+</body>
+</html>

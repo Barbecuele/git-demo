@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动跳转首页</title>
+    <style>
+        p{
+            text-align: center;
+        }
+
+        span{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+<p>
+    <span id="time">5</span>秒之后，自动跳转到首页.....
+</p>
+<script>
+    /*
+         分析：
+             1.显示页面效果<p>
+             2.倒计时读秒效果实现
+                 定义一个方法，获取span标签，修改span标签体内容，事件
+                 定义一个计时器，1秒钟执行一次该方法
+      */
+    var seconds = 5;
+    var time = document.getElementById("time");
+    function showTime(){
+        seconds--;
+
+        if(seconds<=0){
+            location.href="https://so.lenovo.com.cn/";
+        }
+
+        time.innerHTML = seconds + "";
+    }
+
+    //设置定时器，1秒执行一次该方法
+    setInterval(showTime,1000);
+</script>
+</body>
+</html>

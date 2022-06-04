@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件绑定</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <script>
+        /*window.onload = function (){
+            $("#b1").click(function (){
+                alert("abc");
+            })
+        }*/
+
+        /*$(function (){
+            $("#b1").click(function (){
+                alert("abc");
+            })
+        })*/
+
+        $(function (){
+            $("#div1").css("background-color","red");
+        })
+
+        $(function (){
+            $("#div2").css("backgroundColor","pink");
+        })
+    </script>
+</head>
+<body>
+<div id="div1">div1...</div>
+<div id="div2">div2...</div>
+<input type="button" id="b1" value="shoot me">
+
+</body>
+</html>

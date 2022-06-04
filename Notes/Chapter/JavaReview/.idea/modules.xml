@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GBF/GBF.iml" filepath="$PROJECT_DIR$/GBF/GBF.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IOReview/IOReview.iml" filepath="$PROJECT_DIR$/IOReview/IOReview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaReview.iml" filepath="$PROJECT_DIR$/JavaReview.iml" />
+    </modules>
+  </component>
+</project>

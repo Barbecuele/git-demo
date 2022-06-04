@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global</title>
+    <script>
+        /*
+            Global
+                1.特点：全局对象，这个Global中封装的方法不需要对象就可以直接调用。  方法名()；
+                2.方法：
+                    decodeURIComponent():URL解码
+                    encodeURIComponent():URL编码
+                    以上两种编码或解码的字符种类更多
+
+                    decodeURI():URL解码
+                    encodeURI():URL编码
+
+                    parseInt():将字符串转为数字
+                        逐一判断每一个字符是否是数字，直到不是数字为止，将前面的数字部分转为number
+
+                    isNaN():判断一个数字是否是NaN
+                        NaN六亲不认，连自己都不认识，NaN参与的==全部为false
+
+                    eval():评估字符串并像脚本代码一样执行它(计算JavaScript字符串，并把它作为脚本代码来执行)。
+
+                3.URL编码
+                传智播客：%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2
+         */
+        /*
+        var str = "传智播客";
+        let uri = encodeURI(str);
+        document.write(uri + "<br>");
+
+        var str1 = "郭江瑞我草你妈";
+        let url = encodeURI(str1);
+        document.write(url + "<br>");
+
+        var encode = "%E9%83%AD%E6%B1%9F%E7%91%9E%E6%88%91%E8%8D%89%E4%BD%A0%E5%A6%88";
+        var str2 = decodeURI(encode);
+        document.write(str2 + "<br>");
+         */
+        var str = "传智播客";
+        let s = encodeURIComponent(str);
+        document.write(s + "<br>");
+        let s1 = decodeURIComponent(s);
+        document.write(s1 + "<br>");
+
+        var num = "123";
+        let number = parseInt(num);
+        document.write(number + "<br>");
+
+        var num1 = "1223e43";
+        let number1 = parseInt(num1);
+        document.write(number1 + "<br>");
+
+        var num2 = "b1223e43";
+        let number2 = parseInt(num2);
+        document.write(number2 + "<br>");
+
+        var a = NaN;
+        document.write(a==NaN);//false
+
+        document.write("<br>")
+
+        document.write(isNaN(a));//true
+
+        document.write("<br>")
+
+        var jsCode = "document.write(s1 + \"<br>\");";
+        eval(jsCode)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

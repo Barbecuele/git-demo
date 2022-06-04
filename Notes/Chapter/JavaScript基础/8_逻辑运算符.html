@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>逻辑运算符</title>
+    <script>
+        /**
+         * 逻辑运算符
+         *      && 短路与
+         *      || 短路或
+         *      ！ 非：
+         *          其它类型转boolean：
+         *              1.number：0或NaN为假，其余为真
+         *              2.string:除了空字符串，其余为true
+         *              3.null&undefined 都是false
+         *              4.对象 所有对象都为true
+         */
+
+        var flag = true;
+        document.write(flag + "<br>");
+        document.write(!flag + "<br>");
+        document.write("<hr size=3px color='red'>");
+
+        //number
+        var num = 3;
+        var num2 = 0;
+        var num3 = NaN;
+        document.write(!num + "<br>");
+        document.write(!!num + "<br>");
+        document.write(!num2 + "<br>");
+
+        /*
+        while(1){
+
+        }
+         */
+        document.write("<hr size=3px color='red'>");
+
+        //string
+        var str = "abc";
+        var str2 = "";
+        document.write(!str + "<br>");
+        document.write(!!str2 + "<br>");
+
+        document.write("<hr size=3px color='red'>");
+
+        //null&undefined
+        var nl = null;
+        var df =undefined;
+        document.write(!nl + "<br>");
+        document.write(!!df + "<br>");
+
+        document.write("<hr size=3px color='red'>");
+
+        //对象
+        var date = new Date();
+        document.write(!date + "<br>");
+
+        if(date){ //防止空指针异常
+            alert(123);
+        }
+
+        document.write("<hr size=3px color='blue'>");
+        var t = +"abc";
+        document.write(!t + "<br>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

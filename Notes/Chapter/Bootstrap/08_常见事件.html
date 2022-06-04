@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常见事件</title>
+    <script>
+        //加载完成事件
+        window.onload = function (){
+            //失去焦点事件
+            /*document.getElementById("username").onblur = function () {
+                document.write("fuck you!");
+            }*/
+
+            //绑定鼠标移动到元素之上事件
+            /*document.getElementById("username").onmouseover = function (){
+                alert("鼠标来了");
+            }*/
+
+            /*document.getElementById("username").onmouseout = function (){
+                alert("鼠标走咯");
+            }*/
+
+            //鼠标点击事件
+            /*document.getElementById("username").onmousedown = function (event){
+                alert(event.button);
+            }*/
+
+            /*document.getElementById("username").onkeydown= function (event){
+                if (event.keyCode==13){
+                    alert("表单已被提交");
+                }
+            }*/
+
+            /*document.getElementById("city").onchange = function (event){
+                    alert("数据已被更新");
+            }*/
+
+            /*document.getElementById("form").onsubmit = function (){
+                //校验用户名格式是否正确
+                var flag = false;
+
+                return false;
+            }*/
+        }
+
+        function checkForm(){
+            return false;
+        }
+    </script>
+</head>
+<body>
+
+<select id="city">
+    <option>----请选择城市列表----</option>
+    <option>北京</option>
+    <option>上海</option>
+    <option>广州</option>
+</select>
+
+<form action="#" id="form" onsubmit=" return checkForm()">
+    <input id="username" name="username">
+    <input type="submit" value="提交">
+</form>
+</script>
+</body>
+</html>

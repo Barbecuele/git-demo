@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+</head>
+<body>
+    <img id="pho" src="img/material01.png" width="100%">
+    <input type="button" id="back" value="后退">
+    <script>
+        var number = 1;
+
+        function fun(){
+            number++;4
+            if (number>4){
+                number=1;
+            }
+            var pho = document.getElementById("pho");
+
+            pho.src = "img/material0"+ number+".png";
+        }
+
+        //定时器
+        setInterval(fun,2000);
+
+        var back = document.getElementById("back");
+
+        back.onclick = function (){
+            // history.back();
+            history.go(-1);
+        }
+    </script>
+</body>
+</html>

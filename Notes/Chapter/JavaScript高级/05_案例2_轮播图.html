@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+</head>
+<body>
+    <img id="pho" src="img/material01.png" width="100%">
+    <script>
+        var number = 1;
+
+        function fun(){
+            number++;4
+            if (number>4){
+                number=1;
+            }
+            var pho = document.getElementById("pho");
+
+            pho.src = "img/material0"+ number+".png";
+        }
+
+        //定时器
+        setInterval(fun,2000);
+    </script>
+</body>
+</html>

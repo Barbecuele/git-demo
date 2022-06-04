@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //1.定义基本格式
+        var person = {name: "郭江瑞", age: 22, gender: true};
+        //alert(person);
+        //alert(person.name);
+        //2.嵌套格式
+        var persons = {
+            person: [
+                {name: "郭江瑞", age: 22, gender: true},
+                {name: "杨发发", age: 21, gender: false},
+                {name: "包卓龙", age: 21, gender: false},
+                {name: "熊杰", age: 210, gender: true}]
+        };
+        //alert(persons);
+        //alert(persons.person[1].name);
+
+        //3.嵌套格式
+        var ps = [
+            {name: "郭江瑞", age: 22, gender: true},
+            {name: "杨发发", age: 21, gender: false},
+            {name: "包卓龙", age: 21, gender: false},
+            {name: "熊杰", age: 210, gender: true}];
+        //alert(ps);
+        alert(ps[3].name);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
